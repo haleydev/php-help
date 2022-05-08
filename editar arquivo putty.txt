@@ -1,0 +1,22 @@
+editar arquivo putty
+nano + nome arquivo
+salvar ctrl + x
+
+
+git clone na pasta rais ( antes de public ):
+git clone git@github.com:haleydev/dev-mcquery.git
+
+remover pasta public:
+rm -Rf public_html/
+
+link simbolico:
+ln -s dev-mcquery/Public public_html
+
+atualizar:
+git pull
+
+
+
+
+
+

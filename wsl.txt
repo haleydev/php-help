@@ -1,0 +1,95 @@
+iniciar processos:
+sudo service apache2 start
+sudo /etc/init.d/mysql start
+----------------------------------------------------------
+comandos wsl
+
+wsl --install
+
+pasta wsl \\wsl$
+
+reiniciar wsl
+wsl --shutdown
+
+rodando e versao
+wsl -l -v
+
+ative integracao docker + wsl no aplicativo docker windows
+----------------------------------------------------------
+php install
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+
+sudo apt install php5.6
+sudo apt install php7.0
+sudo apt install php7.1
+sudo apt install php7.2
+sudo apt install php7.3
+sudo apt install php7.4
+sudo apt install php8.1
+
+sudo apt-get upgrade apache2
+sudo apt install php php-mysql
+sudo apt install php libapache2-mod-php php-mysql
+sudo apt-get install unzip 
+sudo apt-get install php8.1-xml php8.1-imagick php8.1-curl php8.1-mysql php8.1-xmlrpc php8.1-intl php5.6-xml php5.6-imagick php5.6-curl php5.6-mysql php5.6-xmlrpc php5.6-intl php7.0-xml php7.0-imagick php7.0-curl php7.0-mysql php7.0-xmlrpc php7.0-intl php7.1-xml php7.1-imagick php7.1-curl php7.1-mysql php7.1-xmlrpc php7.1-intl php7.2-xml php7.2-imagick php7.2-curl php7.2-mysql php7.2-xmlrpc php7.2-intl php7.3-xml php7.3-imagick php7.3-curl php7.3-mysql php7.3-xmlrpc php7.3-intl php7.4-xml php7.4-imagick php7.4-curl php7.4-mysql php7.4-xmlrpc php7.4-intl
+----------------------------------------------------------
+php configuracoes:
+
+listar versoes:
+sudo update-alternatives --list php
+
+alterar versao apache:
+sudo a2dismod php7.1
+sudo a2enmod php5.6
+
+alterar versao linha de comando:
+sudo update-alternatives --set php /usr/bin/php5.6
+
+sudo service apache2 restart
+
+permitir alteracao de arquivos
+sudo chown -R haley /etc/apache2
+
+ativar .htaccess
+sudo a2enmod rewrite
+
+\\wsl$\Ubuntu\etc\apache2\sites-available
+adicione ao arquivo 000-default:
+<Directory /var/www/html>
+    AllowOverride All
+</Directory>
+
+pwd ver diretorio atual
+
+alterar local arquivo: \\wsl$\Ubuntu\etc\apache2\mods-available\userdir
+e alterar configuracoes:
+AllowOverride All
+Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+Require all granted
+
+mudar diretorio /var/www/html para da area de trabalho
+\\wsl$\Ubuntu\etc\apache2\arquivo apache 2
+
+sudo service apache2 restart
+----------------------------------------------------------
+mysql install
+ob:MySQL Workbench windows
+
+sudo apt install mysql-server
+sudo /etc/init.d/mysql start
+
+sudo mysql
+CREATE DATABASE haley_server;
+CREATE USER 'haley'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+GRANT ALL ON haley_server.* TO 'haley'@'%';
+FLUSH PRIVILEGES;
+
+REINICIE WSL:
+wsl --shutdown
+sudo /etc/init.d/mysql start
+
+listar base de dados:
+SHOW DATABASES;
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-pt

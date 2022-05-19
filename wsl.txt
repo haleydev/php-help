@@ -2,6 +2,9 @@ iniciar processos:
 sudo service apache2 start
 sudo /etc/init.d/mysql start
 ----------------------------------------------------------
+server config:
+https://hcode.com.br/blog/como-configurar-apache-virtual-hosts-no-linux-ubuntu
+
 comandos wsl
 
 wsl --install

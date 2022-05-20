@@ -1,0 +1,31 @@
+sudo nano /etc/apache2/sites-available/site.teste.conf
+
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName site.teste
+    ServerAlias www.site.teste
+    DocumentRoot /var/www/folder
+    <Directory /var/www/folder>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+slavar:
+ctrl + o
+
+ativar
+sudo a2ensite dev.com.conf
+
+desabilitar
+sudo a2dissite 000-default.conf
+
+sudo service apache2 restart
+
+arquivo host windows C:\Windows\System32\drivers\etc
+127.0.0.1       site.teste
+::1             site.teste

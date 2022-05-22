@@ -7,6 +7,8 @@ sudo ufw status
 /etc/nginx/sites-available
 sudo systemctl reload nginx
 
+ln -s /etc/nginx/sites-available/novosite /etc/nginx/sites-enabled/novosite
+
 permitir alteracao de arquivos
 sudo chown -R haley /var/www
 

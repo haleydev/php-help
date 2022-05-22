@@ -6,6 +6,7 @@ sudo ufw status
 
 /etc/nginx/sites-available
 sudo systemctl reload nginx
+sudo /etc/init.d/php-fpm restart 
 
 permitir alteracao de arquivos
 sudo chown -R haley /var/www

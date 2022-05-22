@@ -64,9 +64,6 @@ sudo apt-get install php8.1-xml php8.1-imagick php8.1-curl php8.1-mysql php8.1-x
 
 ----------------------------------------------------------
 
-mysql install
-ob:MySQL Workbench windows
-
 sudo apt install mysql-server
 sudo /etc/init.d/mysql start
 

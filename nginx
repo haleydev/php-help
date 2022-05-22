@@ -76,9 +76,5 @@ CREATE USER 'haley'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
 GRANT ALL ON haley_server.* TO 'haley'@'%';
 FLUSH PRIVILEGES;
 
-REINICIE WSL:
-wsl --shutdown
-sudo /etc/init.d/mysql start
-
 listar base de dados:
 SHOW DATABASES;

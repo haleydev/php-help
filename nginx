@@ -9,6 +9,9 @@ sudo systemctl reload nginx
 
 ln -s /etc/nginx/sites-available/novosite /etc/nginx/sites-enabled/novosite
 
+remover link simbolico
+rm -v nome
+
 permitir alteracao de arquivos
 sudo chown -R haley /var/www
 

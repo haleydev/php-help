@@ -89,3 +89,4 @@ FLUSH PRIVILEGES;
 
 listar base de dados:
 SHOW DATABASES;
+sudo mysql db_name < backup-file.sql

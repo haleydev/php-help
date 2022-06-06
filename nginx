@@ -89,4 +89,6 @@ FLUSH PRIVILEGES;
 
 listar base de dados:
 SHOW DATABASES;
+
+https://www.educba.com/mariadb-grant-all-privileges/
 sudo mysql db_name < backup-file.sql
